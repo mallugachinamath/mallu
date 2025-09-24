@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinematic Movie Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="https://cdn.pixabay.com/video/2021/07/30/83274-581386222_large.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Dark overlay -->
+  <div class="overlay"></div>
+
+  <!-- Main content -->
+  <div class="cinematic-container">
+    <h1 class="title">🎬 Movie Explorer</h1>
+    <div class="film-reel"></div>
+    <button class="start-btn" onclick="enterApp()">
+        <a href="/KIRAN/index.html">START EXPLORER</a>
+    </button>
+    <button class="music-btn" onclick="toggleMusic()">🎵 Music</button>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
