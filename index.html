@@ -2,36 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cinematic Movie Explorer</title>
+  <title>Movie & Book Explorer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Background Video -->
-  <video autoplay muted loop id="bg-video">
-    <source src="https://cdn.pixabay.com/video/2021/07/30/83274-581386222_large.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+  <h1>🎬📚 Movie & Book Explorer</h1>
 
-  <!-- Dark overlay -->
-  <div class="overlay"></div>
-
-  <!-- Main content -->
-  <div class="cinematic-container">
-    <h1 class="title">🎬 Movie Explorer</h1>
-    <div class="film-reel"></div>
-    <button class="start-btn" onclick="enterApp()">
-        <a href="/KIRAN/index.html">START EXPLORER</a>
-    </button>
-    <button class="music-btn" onclick="toggleMusic()">🎵 Music</button>
+  <!-- Search Section -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search movies or books...">
+    <select id="typeSelect">
+      <option value="movie">Movie</option>
+      <option value="book">Book</option>
+    </select>
+    <button id="searchBtn">Search</button>
   </div>
 
-  <!-- Background Music -->
-  <audio id="bg-music" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-  </audio>
+  <!-- Filters -->
+  <div class="filter-container">
+    <label>Filter by Language:</label>
+    <select id="langFilter">
+       <option value="all">ALL</option>
+        
+               
+    </select>
+
+    <label>Sort by Year:</label>
+    <select id="yearSort">
+      <option value="none">None</option>
+      <option value="newest">Newest First</option>
+      <option value="oldest">Oldest First</option>
+    </select>
+
+    <button id="toggleTheme">🌙 Toggle Theme</button>
+  </div>
+
+  <!-- Results -->
+  <h2>Results</h2>
+  <div id="results" class="card-container"></div>
+
+  <!-- Favourites -->
+  <h2>⭐ Favourite List</h2>
+  <button id="clearFav">❌ Clear All Favourites</button>
+  <div id="favourites" class="card-container"></div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
